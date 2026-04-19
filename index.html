@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Ксюша в стране селеб</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="cover">
+    <div class="cover-bg"></div>
+    <div class="cover-overlay"></div>
+    <div class="cyber-grid"></div>
+    <div class="rain"></div>
+
+    <div class="settings-btn" id="settingsBtn">
+        <div class="settings-icon">⚙️</div>
+    </div>
+
+    <div class="title-block">
+        <div class="title-3d">
+            <span class="title-char" data-char="К">К</span>
+            <span class="title-char" data-char="С">С</span>
+            <span class="title-char" data-char="Ю">Ю</span>
+            <span class="title-char" data-char="Ш">Ш</span>
+            <span class="title-char" data-char="А">А</span>
+        </div>
+        <div class="title-sub">В СТРАНЕ СЕЛЕБ</div>
+
+        <div class="genre-badge">ТРИЛЛЕР • ФАНТАСТИКА • РОМАНТИКА</div>
+
+        <div class="episode-counter" id="episodeCounter">1 СЕРИЯ, 1 СЕЗОН</div>
+
+        <div class="start-btn" id="startGameBtn">
+            <div class="cylinder">
+                <div class="chamber-hole"></div>
+                <div class="trigger"></div>
+            </div>
+            <div class="btn-text">▶ НАЧАТЬ</div>
+            <div class="btn-pulse"></div>
+        </div>
+
+        <!-- КНОПКА СПИСКА СЕРИЙ -->
+        <div class="episodes-btn" id="episodesBtn">
+            <div class="episodes-btn-text">📜 СПИСОК СЕРИЙ</div>
+        </div>
+    </div>
+</div>
+
+<!-- ПАНЕЛЬ СПИСКА СЕРИЙ -->
+<div class="episodes-panel" id="episodesPanel">
+    <div class="episodes-header">
+        <span class="episodes-title">⚡ ВЫБЕРИ СЕРИЮ ⚡</span>
+        <button class="close-episodes" id="closeEpisodesBtn">✕</button>
+    </div>
+    <div class="episodes-list" id="episodesList"></div>
+</div>
+
+<div class="settings-panel" id="settingsPanel">
+    <div class="settings-header">
+        <span class="settings-title">⚙️ НАСТРОЙКИ</span>
+        <button class="close-settings" id="closeSettingsBtn">✕</button>
+    </div>
+    <div class="settings-content">
+        <div class="setting-item">
+            <div class="setting-label">
+                <span class="setting-icon">🎵</span>
+                <span id="musicLabel">Фоновая музыка</span>
+            </div>
+            <label class="toggle-switch" onclick="event.stopPropagation()">
+                <input type="checkbox" id="musicToggle" checked>
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+        <div class="setting-item">
+            <div class="setting-label">
+                <span class="setting-icon">🔊</span>
+                <span id="volumeLabel">Громкость</span>
+            </div>
+            <div class="volume-control" onclick="event.stopPropagation()">
+                <span class="volume-icon">🔉</span>
+                <input type="range" id="volumeSlider" min="0" max="100" value="50">
+                <span class="volume-icon">🔊</span>
+                <span class="volume-value" id="volumeValue">50%</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

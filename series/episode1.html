@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Ксюша в стране селеб — Серия 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="background" id="background"></div>
+        <div class="fade-overlay" id="fadeOverlay"></div>
+        
+        <div class="side-text-left">STARS•STARS•STARS</div>
+        <div class="side-text-right">FAME•FAME•FAME</div>
+        
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+        
+        <div class="avatar-container">
+            <img class="avatar" id="avatarImg" src="" alt="avatar">
+        </div>
+        
+        <div class="dialogue-box" id="dialogueBox">
+            <div class="speaker-name" id="speakerName"></div>
+            <div class="dialogue-text" id="dialogueText"></div>
+            <div class="continue-hint">▼ нажми в любом месте ▼</div>
+        </div>
+        
+        <div class="choices-panel" id="choicesPanel">
+            <div class="choices-title">⚡ ЧТО ДЕЛАТЬ? ⚡</div>
+            <div id="choicesList"></div>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        
+        <div class="status-badge">СЕРИЯ 1: НАЧАЛО</div>
+        <div class="back-to-menu" id="backToMenu">🏠 МЕНЮ</div>
+        <div class="settings-btn-series" id="settingsBtnSeries">⚙️</div>
+        
+        <!-- ПАНЕЛЬ НАСТРОЕК В СЕРИИ -->
+        <div class="settings-panel-series" id="settingsPanelSeries">
+            <div class="settings-header-series">
+                <span class="settings-title-series">⚙️ НАСТРОЙКИ</span>
+                <button class="close-settings-series" id="closeSettingsBtnSeries">✕</button>
+            </div>
+            <div class="settings-content-series">
+                <div class="setting-item-series">
+                    <div class="setting-label-series">
+                        <span class="setting-icon-series">🎵</span>
+                        <span>Фоновая музыка</span>
+                    </div>
+                    <label class="toggle-switch-series" onclick="event.stopPropagation()">
+                        <input type="checkbox" id="musicToggleSeries" checked>
+                        <span class="toggle-slider-series"></span>
+                    </label>
+                </div>
+                <div class="setting-item-series">
+                    <div class="setting-label-series">
+                        <span class="setting-icon-series">🔊</span>
+                        <span>Громкость</span>
+                    </div>
+                    <div class="volume-control-series" onclick="event.stopPropagation()">
+                        <span class="volume-icon-series">🔉</span>
+                        <input type="range" id="volumeSliderSeries" min="0" max="100" value="50">
+                        <span class="volume-icon-series">🔊</span>
+                        <span class="volume-value-series" id="volumeValueSeries">50%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ОВЕРЛЕЙ ДЛЯ КАТСЦЕН -->
+    <div class="cutscene-overlay" id="cutsceneOverlay">
+        <img id="cutsceneImg" src="" alt="cutscene">
+        <button class="cutscene-close" id="cutsceneClose">✕</button>
+    </div>
+    
+    <script src="script1.js"></script>
+</body>
+</html>
